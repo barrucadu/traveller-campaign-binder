@@ -1,0 +1,325 @@
+\documentclass[10pt]{article}
+
+\usepackage[a4paper,left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm]{geometry}
+
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{fancybox}
+\usepackage[svgnames]{xcolor}
+\usepackage{titlesec}
+
+\usepackage{fontspec}
+\setmainfont{equity}[
+  % Files
+  Path      = \string~/s/fonts/equity/ ,
+  Extension = .otf ,
+  % Fonts
+  UprightFont     = Equity Text A Regular ,
+  UprightFeatures = { SmallCapsFont = Equity Caps A Regular } ,
+  BoldFont        = Equity Text A Bold ,
+  BoldFeatures    = { SmallCapsFont = Equity Caps A Bold } ,
+  ItalicFont      = Equity Text A Italic ,
+  BoldItalicFont  = Equity Text A Bold Italic ,
+  % Features
+  Numbers = OldStyle ]
+
+\titlespacing{\section}{0pt}{0pt}{4pt plus 2pt minus 2pt}
+\titlespacing{\subsection}{0pt}{6pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+
+\newcommand{\sectioncolorbox}[1]{\colorbox{Black}{\parbox{\linewidth}{\small\strut\centering\color{white} #1}}}
+\titleformat{\section}[display]{\bfseries}{}{0pt}{\sectioncolorbox}
+
+\newcommand{\subsectioncolorbox}[1]{\colorbox{Grey!40}{\parbox{\linewidth}{\small\strut #1}}}
+\titleformat{\subsection}[display]{\bfseries}{}{0pt}{\subsectioncolorbox}
+
+\setcounter{secnumdepth}{0}
+
+\pagestyle{empty}
+\nonfrenchspacing
+
+\setlength{\parskip}{\medskipamount}
+\makeatletter
+\newcommand{\@minipagerestore}{\setlength{\parskip}{\medskipamount}}
+\makeatother
+
+% Y = centred X
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\newenvironment{emphbox}{\begin{Sbox}\begin{minipage}{\columnwidth - 2\fboxsep - 2\fboxrule - \shadowsize}\small}{\end{minipage}\end{Sbox}\shadowbox{\TheSbox}}
+
+\newcommand\dice[1]{\textsc{#1}}
+\newcommand{\skillcheck}[2]{\textsc{#1} / #2 check}
+\newcommand{\oskillcheck}[3]{\textsc{#1} or \textsc{#2} / #3 check}
+\newcommand{\diemod}[1]{\textsc{dm}~#1}
+
+\begin{document}
+\footnotesize
+
+\section{Checks}
+
+\begin{multicols}{3}
+\begin{emphbox}
+  \begin{center}
+    \dice{2d + dm + luck}
+
+    Luck must be declared before rolling.
+
+    \textbf{Boon / Bane:} best / worst two of \dice{3d}.
+  \end{center}
+\end{emphbox}
+
+\begin{tabularx}{\linewidth}{Xl} \toprule
+Difficulty & Target \\ \midrule
+Simple & 2+ \\
+Easy & 4+ \\
+Routine & 6+ \\
+Average & 8+ \\
+Difficult & 10+ \\
+Very Difficult & 12+ \\
+Formidable & 14+ \\
+Impossible & 16+ \\ \bottomrule
+\end{tabularx}
+
+\textbf{Doing multiple tasks:} increase difficulty one step.
+
+\columnbreak
+
+\begin{tabularx}{\linewidth}{lXr} \toprule
+Effect & Result & Chain \textsc{dm} \\ \midrule
+-6 or less & Exceptional Failure & -3 \\
+-5 to -2 & Average Failure & -2 \\
+-1 & Marginal Fail & -1 \\
+0 & Marginal Success & 0 \\
+1 to 5 & Average Success & 1 \\
+6 or more & Exceptional Success & 2 \\ \bottomrule
+\end{tabularx}
+
+\subsection{Time}
+
+\textbf{\dice{1d} seconds}\\
+\textit{e.g.} shooting, punching, jumping
+
+\textbf{\dice{1d} combat rounds}\\
+\textit{e.g.} hurrying jump calculations
+
+\textbf{\dice{1d $\times$ 10} seconds}\\
+\textit{e.g.} rerouting power, opening a comms channel
+
+\textbf{\dice{1d} minutes}\\
+\textit{e.g.} first aid, basic technical tasks
+
+\textbf{\dice{1d $\times$ 10} minutes}\\
+\textit{e.g.} complex technical tasks, searching thoroughly
+
+\textbf{\dice{1d} hours}\\
+\textit{e.g.} building a shelter, moving through wilderness
+
+\textbf{\dice{1d $\times$ 4} hours}\\
+\textit{e.g.} researching a problem
+
+\textbf{\dice{1d $\times$ 10} hours}\\
+\textit{e.g.} repairing a damaged ship
+
+\textbf{\dice{1d} days}\\
+\textit{e.g.} combing a city for a missing person
+
+\textbf{Going faster or slower by one step:} \diemod{$\pm 2$}.
+\end{multicols}
+
+\section{Combat}
+
+\begin{multicols}{3}
+\begin{emphbox}
+  \begin{center}
+    \dice{2d + dex {\normalfont or} int dm + Tactics Effect + Surprise}
+  \end{center}
+
+  \textbf{Tactics:} One combatant per side may make a check, adding
+  the Effect to Initiative.
+
+  \textbf{Surprise:} $\pm$ 6 (first round only).
+
+  \begin{center}
+    \textbf{Round (6 seconds)}
+  \end{center}
+
+  One \textbf{Significant Action} or two \textbf{Minor Actions}\\
+  One \textbf{Minor Action}\\
+  Any number of \textbf{Free Actions}\\
+  Any number of \textbf{Reactions}
+\end{emphbox}
+
+\subsection{Significant Actions}
+
+\textbf{Melee Attack}\\
+\oskillcheck{str}{dex}{Melee (specialism)}.
+
+\textbf{Ranged Attack}\\
+\skillcheck{dex}{Gun Combat (specialism)}.
+
+\begin{tabularx}{\linewidth}{lX} \toprule
+Bonus & \textsc{dm} \\ \midrule
+Aiming & +1 per aim action (max +6) \\
+Laser Sight & +1 if aiming \\
+Short Range & +1 \\ \midrule
+Penalty & \\ \midrule
+Fast Moving & -1 per 10 relative m/round \\
+Long Range & -2 \\
+Extreme Range & -4 \\
+Target Covered & -2 \\
+Prone Target & -1 \\ \bottomrule
+\end{tabularx}
+
+\textbf{Short range:} up to $\times\frac{1}{4}$.\\
+\textbf{Long range:} up to $\times 2$.\\
+\textbf{Extreme range:} up to $\times 4$, or 100m if no scope.
+
+\textbf{Miscellaneous}\\
+Skill check, or full concentration, or is complicated.\\
+\textit{e.g.} applying first aid, bypassing a security system.
+
+\subsection{Minor Actions}
+
+\textbf{Aim}\\
+\diemod{+1} on the immediately following ranged attack.
+
+\textbf{Change Stance}\\
+Crouch or lie prone.
+
+\textbf{Draw / Reload}\\
+Draw, make ready for combat, or reload (unless noted otherwise in the
+weapon description).
+
+\textbf{Move}\\
+Move a number of metres up to Movement score (usually 6 for humans).
+Difficult terrain halves speed.  Being prone quarters speed.
+
+\textbf{Miscellaneous}\\
+Doesn't require concentration, or is simple.\\
+\textit{e.g.} identifying equipment, picking something up.
+
+\subsection{Reactions}
+
+Each reaction gives \diemod{-1} on the next turn.
+
+\textbf{Dodge}\\
+Inflict the highest of the \textsc{dex} or Athletics (dex) \textsc{dm}
+as a to-hit penalty.
+
+\textbf{Dive for Cover (vs Ranged)}\\
+Inflict \diemod{-2} and reach cover within 1.5 metres.  If no cover,
+only \diemod{-1}.  This skips the next turn.
+
+\textbf{Parry}\\
+Inflict Melee \textsc{dm} as a to-hit penalty in close combat.
+
+\textbf{Opportunity Attack}\\
+Attack if a combatant leaves close combat with \diemod{+2} to-hit.
+
+\subsection{Extended Actions}
+
+Roll for duration in rounds.  When taking damage, make a check with
+the damage taken as a negative \textsc{dm} to see if that round's
+progress counts.
+
+Exceptional Failure means all progress is lost.
+
+\subsection{Damage}
+
+Add to-hit Effect to weapon damage (unless Destructive, in which case
+no Effect but $\times 10$).  Melee attacks also add \textsc{str}
+\textsc{dm}.
+
+Armour reduces damage.  To-hit with Effect 6 deals at least 1 damage.
+
+\begin{tabularx}{\linewidth}{Xl} \toprule
+Cover & Bonus Armour \\ \midrule
+Vegetation & +2 \\
+Trees & +6 \\
+Stone Wall & +8 \\
+Vehicle & +10 \\
+Armoured Vehicle & +15 \\
+Fortifications & +20 \\ \bottomrule
+\end{tabularx}
+
+\subsection{Grappling}
+
+Opposed \oskillcheck{str}{dex}{Melee (unarmed)}.
+
+\textbf{The winner may do one of the following:}\\
+Force prone.\\
+Disarm and (if Effect 6+) take the weapon.\\
+Throw \dice{1d} metres for \dice{1d} damage.\\
+Inflict 2 + Effect damage, ignoring armour.\\
+Attack with a pistol, blade, or other small weapon.\\
+Drag up to 3 metres.
+
+\subsection{Dual Wielding}
+
+\diemod{-2} to to-hit rolls with both.
+
+\subsection{Leadership}
+
+One Traveller may make a Leadership check.  Their side gets Boon or
+Bane dice equal to the Effect.
+
+\subsection{Weapon Traits}
+
+See page 75 of the core rulebook.
+\end{multicols}
+
+\begin{multicols}{2}
+\section{Damage}
+
+Damage is taken from \textsc{end}, then from \textsc{str} or
+\textsc{dex}.  When two characteristics reach 0, the Traveller falls
+unconscious.  When three characteristics reach 0:
+
+\begin{tabularx}{\linewidth}{lX} \toprule
+\dice{2d + dm} & Result \\ \midrule
+2 or less & Destroyed gruesomely. \\
+2 to 3 & Killed outright. \\
+4 to 5 & Die without prompt medical attention.  Gain a disability. \\
+6 to 7 & Die without prompt medical attention.  Lose \dice{1d} from one of max \textsc{str}, \textsc{dex}, \textsc{end}, and \dice{d3} from the others. \\
+8 to 9 & Survive if given even basic medical attention.  Lose \dice{d3} from \textsc{str} and \textsc{end} without good medical care during recovery. \\
+10 to 11 & Survive without assistance and make a full recovery with care. \\
+12 or more & Survive and make a full recovery even without assistance. \\ \bottomrule
+\end{tabularx}
+
+\textbf{Final attack caused less than 3 points of damage:} \diemod{+4}.\\
+\textbf{Final attack caused 4 to 6 points of damage:} \diemod{+2}.\\
+\textbf{Final attack caused more than 6 points of damage:} \diemod{-2}.\\
+Luck can be \textbf{permanently} spent to gain a bonus.
+
+\vfill\columnbreak
+\section{Healing}
+\textbf{First Aid}\\
+Recover \dice{Medic Effect}.  Must be done within one minute of
+injury.
+
+\textbf{Surgery}\\
+Recover \dice{3 + Medic Effect}.  Requires a sick bay or hospital.
+
+\textbf{Medical Care}\\
+Recover \dice{3 + end dm + Medic Effect} check per day.  Requires a
+sick bay or hospital and bed rest.  Cannot be done with three damaged
+characteristics.
+
+\textbf{Natural Healing}\\
+Recover \dice{1d + end dm} (just \textsc{end dm} if in need of
+surgery).  Requires bed rest.
+
+\textbf{Augmentation and Medical Care}\\
+If done in a lower-tier facility, checks take the difference between
+the \textsc{tl} of the best highest augmentation and the facility as a
+negative \textsc{dm}.
+
+\textbf{Unconsciousness}\\
+Make an \textsc{end} check to regain consciousness, with a cumulative
+\diemod{+1}.
+\end{multicols}
+\end{document}
