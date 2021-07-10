@@ -14,6 +14,7 @@
 \RequirePackage{fancybox}
 \RequirePackage[svgnames]{xcolor}
 \RequirePackage{titlesec}
+\RequirePackage{siunitx}
 
 \RequirePackage{fontspec}
 \setmainfont{equity}[
@@ -53,8 +54,9 @@
 \newenvironment{emphbox}{\begin{Sbox}\begin{minipage}{\columnwidth - 2\fboxsep - 2\fboxrule - \shadowsize}\small}{\end{minipage}\end{Sbox}\shadowbox{\TheSbox}}
 
 \newcommand\dice[1]{\textsc{#1}}
-\newcommand{\skillcheck}[2]{\textsc{#1} / #2 check}
-\newcommand{\oskillcheck}[3]{\textsc{#1} or \textsc{#2} / #3 check}
-\newcommand{\diemod}[1]{\textsc{dm}~#1}
+\newcommand{\chrcheck}[2][]{#1\unskip\space\textsc{#2} check}
+\newcommand{\skillcheck}[2][]{#1\unskip\space#2 check}
+\newcommand{\chrskillcheck}[3][]{#1\unskip\space\textsc{#2} / #3 check}
+\newcommand{\diemod}[1]{\textsc{dm}~\mbox{#1}}
 
 \AtBeginDocument{\footnotesize}

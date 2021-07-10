@@ -1,0 +1,534 @@
+\documentclass{cheatsheet}
+
+\begin{document}
+
+\section{Spacecraft Operations}
+
+\begin{multicols}{3}
+\begin{emphbox}
+\textbf{Detecting something in sensor range}\\
+\skillcheck{Electronics (sensors)}.
+
+\textbf{Docking with another ship}\\
+\skillcheck[Routine]{Pilot (spacecraft)}.
+
+\textbf{Flying in an atmosphere}\\
+Pilot \diemod{-2} (if partially streamlined and atmosphere 3+); or
+\diemod{-4} (if unstreamlined) with \dice{1d} damage (ignoring armour)
+per failure.
+
+\textbf{Landing at a starport}\\
+\skillcheck[Routine]{Pilot (spacecraft)}.
+
+\textbf{Plotting a jump route}\\
+\chrskillcheck[Easy]{edu}{Astrogation}, \diemod{-parsecs}.
+
+\textbf{Making a jump}\\
+\chrskillcheck[Easy]{edu}{Engineer (j-drive)}, task chain \textsc{dm}
+from plotting, \diemod{-months} if behind on maintenance, \diemod{-2}
+if using unrefined fuel, \diemod{-4} if within the hundred-diameter
+limit.
+
+\textbf{Unlocking a locked airlock}\\
+\skillcheck[Very Difficult]{Electronics (computers)}.
+\end{emphbox}
+
+\subsection{Gas Giant Operations}
+
+\textbf{Layer 1: Wisp}\\
+Cannot skim fuel, offers no sensor interference, no real risk of
+orbital decay.
+
+\textbf{Layer 2: Extreme Shallow}\\
+Can skim fuel at $\frac{1}{10}$ the normal rate.  Power loss results
+in orbital decay in \dice{8d} hours.
+
+\textbf{Layer 3: Shallow}\\
+Can skim fuel at $\frac{1}{2}$ the normal rate.  Power loss results in
+orbital decay in \dice{2d} hours.  Pilot checks have \diemod{-1}.
+
+\textbf{Layer 4: Deep}\\
+Can skim fuel at the normal rate.  Power loss results in orbital decay
+in \dice{2d} minutes.  Pilot checks have \diemod{-2}.
+
+\textbf{Layer 5: Extreme Deep}\\
+Power loss results in \dice{2d} damage each round, and orbital decay
+in \dice{2d} minutes.  Pilot checks have \diemod{-3}.
+
+\textbf{Layer 6: Depths}\\
+Without special protection, \dice{2d} damage each round.  Power loss
+results in \dice{6d} damage each round, and orbital decay in \dice{2d}
+minutes.  Pilot checks have \diemod{-4}.
+
+\textbf{Layer 7: Abyssal Depths}\\
+\dice{4d} damage each round.  Pilot checks have \diemod{-5}.  Sensors
+do not work.
+
+\textbf{Moving between layers:} \skillcheck{Pilot (spacecraft)},
+\diemod{largest negative}.  On failure, the ship bounces off the other
+layer and must succeed \skillcheck[Difficult]{Pilot (spacecraft)} or
+take \dice{[layer]d} hull damage.
+
+\textbf{Fuel skimming:} gain fuel equal to 1\% of hull tonnage per
+pass, where a pass takes \dice{2d} minutes.
+
+\textbf{Sensors:} checks to detect another vessel have \diemod{-2} for
+every layer between them.
+
+\textbf{Weapons:} Spacecraft weapons are less effective deeper in the
+atmosphere.  See \textbf{Space Combat} section.
+
+\subsection{Running Costs and Maintenance}
+
+\begin{tabularx}{\linewidth}{lX} \toprule
+  Item & Monthly Cost \\ \midrule
+  Mortgage & varies \\
+  Life Support & Cr1000/stateroom (Cr3000 if double occupancy); Cr100/low berth; Cr1000/person \\
+  Fuel & Cr500/Rton; Cr100/URton \\
+  Maintenance & 0.1\%/12 of purchase price \\ \bottomrule
+\end{tabularx}
+
+Maintenance must be done at a shipyard at least once per year.  If
+maintenance is skipped, roll with \diemod{+months}, on 8+ roll for
+critical hit:
+
+\begin{tabularx}{\linewidth}{lX} \toprule
+  \dice{2d} & Critical Hit and Outcome \\ \midrule
+  2 to 4 & \textbf{Fuel Leak} \\
+  & Lose \dice{1d $\times$ 10\%} capacity. \\
+  5 to 7 & \textbf{Drive} \\
+  & Roll \dice{1d}.  On 1 to 3 reduce Thrust by 1 and all Pilot checks are with Bane; on 4 to 6, J-Drive is disabled until repaired. \\
+  8 to 9 & \textbf{Weapon Fault} \\
+  & All checks with one random turrent (or weapon if no turrets) are with Bane. \\
+  10 to 12 & \textbf{Power Plant} \\
+  & Power reduced by 25\%; take a further \dice{1d} damage (ignoring armour); all crew take \dice{2d $\times 10$} rads/week. \\ \bottomrule
+\end{tabularx}
+
+\subsection{Jump Travel}
+
+A jump uses 10\% of the hull tonnage for every parsec travelled and
+takes \dice{148 + 6d} hours (about a week).
+
+\textbf{Bad Astrogation}\\
+Roll \dice{2d + Astrogator's Effect}.  The jump is bad on 5 or less.
+
+\textbf{Bad Engineering}\\
+Roll \dice{2d + Engineer's Effect}.  The jump is bad on 5 or less.
+
+\textbf{Bad Jumps}\\
+If one check is bad, all crew must make \textsc{end} and \textsc{int}
+checks, one Routine the other Difficult.
+
+If \chrcheck{end} is failed, the Traveller is nauseous and has
+\diemod{-Effect} for \dice{2d} hours after entry and emergence.
+Exceptional Failure incapacitates the Traveller for
+\dice{2d$\times$30} minutes and imposes \diemod{-6} for \dice{4d}
+hours.
+
+If \chrcheck{int} is failed, the Traveller is irritable and has
+\diemod{-2} for mental or interpersonal checks for the jump duration
+and \dice{1d} hours after emergence.  Exception Failure causes a
+significant mental breakdown.
+
+\textbf{Very Bad Jumps}\\
+If both checks are bad, or the ship misjumps, as \textbf{Bad Jumps}
+with \diemod{-2} and also:
+
+\begin{tabularx}{\linewidth}{lX} \toprule
+  \dice{2d + dm} & Outcome \\ \midrule
+  2 or less & No additional effects. \\
+  3 to 5 & J-Drive needs \dice{2d} days recalibration. \\
+  6 to 8 & J-Drive needs minor repairs. \\
+  9 & J-Drive needs major repairs. \\
+  10 to 12 & Intrusions occur. \\
+  13 or more & Severe intrusions occur. \\ \bottomrule
+\end{tabularx}
+
+Use highest \textsc{dm} of:
+
+\textbf{Bad Jump from both checks:} \diemod{-4}.\\
+\textbf{Bad Jump from misjump:} \diemod{0}.\\
+\textbf{Jumped within 100 diameters:} \diemod{+2}.\\
+\textbf{Jumped within 10 diameters:} \diemod{+4}.
+
+Intrusions destroy the portion of the ship they appear in, and also
+destroy the J-Drive in all cases.  Destroys \dice{2d-2\%} hull
+(\dice{2d+10\%} if severe) per day, requiring major repairs.
+
+\textbf{Misjumps}\\
+If \dice{Astrogator's Effect + Engineer's Effect} is 0 or less, as
+\textbf{Bad Jumps} (or \textbf{Very Bad Jumps} if both checks failed)
+and also:
+
+\begin{tabularx}{\linewidth}{lX} \toprule
+  \dice{2d} & Outcome \\ \midrule
+  2 or less & Destroyed or lost in jumpspace \\
+  3 to 4 & Jumps \dice{1d $\times$ 1d} parsecs in a random direction.  J-Drive destroyed. \\
+  5 to 6 & Jumps \dice{2d} parsecs in a random direction.  J-Drive severely damaged. \\
+  7 to 8 & Jumps \dice{1d} parsecs in a random direction. \\
+  9 to 10 & Duration increased or decreased by \dice{1d} days.  J-Drive needs \dice{d3} days recalibration. \\
+  11 to 12 & Emerge \dice{100 $\times$ 2d} diameters from target. \\ \bottomrule
+\end{tabularx}
+
+\subsection{Repairs}
+
+\textbf{Critical Hits}\\
+A Critical Hit can be temporarily repaired with \chrskillcheck{int
+  {\normalfont or} edu}{Engineer}, with \diemod{-severity} and
+\diemod{+attempts} but will break again after \dice{1d} hours.
+
+Full repairs need a Engineer or Mechanic check (taking \dice{1d}
+hours) and spare parts:
+
+\begin{tabularx}{\linewidth}{Xr} \toprule
+  Effect - Severity & Parts Required \\ \midrule
+  1 or less & 1 ton \\
+  2 & 0.8 tons \\
+  3 & 0.3 tons \\
+  4 & 0.4 tons \\
+  5 & 0.2 tons \\
+  6 or more & none \\ \bottomrule
+\end{tabularx}
+
+A destroyed weapon or piece of equipment cannot be repaired with spare
+parts, and has to be replaced.
+
+\textbf{Hull Damage}\\
+Each lost hull point can be repaired with a
+\chrskillcheck[Routine]{int {\normalfont or} edu}{Mechanic} (taking 1
+hour), for 1 ton of spare parts per 10 hull points repaired.
+
+\subsection{Common Travel Times}
+
+\begin{tabularx}{\linewidth}{Xrr} \toprule
+  Distance & at 1G & at 2G \\ \midrule
+  \textbf{Surface to Orbit} & & \\
+  \SI{10000}{\kilo\meter} & \SI{33}{\minute} & \SI{24}{\minute} \\
+  \textbf{Orbiting Satellite} & & \\
+  \SI{400000}{\kilo\meter} & \SI{211}{\minute} & \SI{149}{\minute} \\
+  \textbf{Close Neighbour World} & & \\
+  \SI{45000000}{\kilo\meter} & \SI{37.3}{\hour} & \SI{26.4}{\hour} \\
+  \textbf{Far Neighbour World} & & \\
+  \SI{255000000}{\kilo\meter} & \SI{88.7}{\hour} & \SI{62.7}{\hour} \\
+  \textbf{Close Gas Giant} & & \\
+  \SI{600000000}{\kilo\meter} & \SI{136.1}{\hour} & \SI{96.2}{\hour} \\
+  \textbf{Far Gas Giant} & & \\
+  \SI{900000000}{\kilo\meter} & \SI{166.7}{\hour} & \SI{117.9}{\hour} \\ \bottomrule
+\end{tabularx}
+
+See page 153 of the core rulebook for more.
+
+\subsection{Security and Hacking}
+
+See page 152 of the core rulebook.
+
+\subsection{Sensors}
+
+See page 150 of the core rulebook.
+\end{multicols}
+
+\section{Travellers In Space}
+
+\begin{multicols}{3}
+\subsection{Zero-G}
+\textbf{Acclimatisation}\\
+\diemod{-1} on all physical skill checks unless the Traveller has the
+Athletics (dex) skill.
+
+\textbf{Recoil}\\
+Make an \skillcheck{Athletics (dex)} when making a melee attack or a
+ranged attack with recoil, or automatically miss and spin out of
+control.
+
+Spinning can be stopped with an \skillcheck{Athletics (dex)}.
+
+\subsection{Life Support}
+A Traveller without life support takes \dice{1d} damage per minute.
+
+\subsection{Vacuum}
+A Traveller in vacuum takes a cumulative \dice{1d} damage per round,
+ignoring armour, and \dice{2d$\times$10} rads per round.
+
+\subsection{Radiation}
+See page 77 of the core rulebook.
+\end{multicols}
+
+\section{Space Combat}
+
+\begin{multicols}{3}
+\begin{emphbox}
+  \begin{center}
+    \dice{2d + Pilot + Thrust + Tactics Effect}
+  \end{center}
+
+  \textbf{Tactics:} The commander of the ship (or fleet) may make a
+  \skillcheck{Tactics (naval)}, adding the Effect to Initiative.
+
+  \textbf{Surprise:} The surprised party skips their first round.
+
+  \begin{center}
+    \textbf{Round (6 minutes)}
+  \end{center}
+
+  Each ship \textbf{Manoeuvres}, then\\
+  Each ship \textbf{Attacks}, then\\
+  Each ship's crew take \textbf{Actions}.\\
+  Ship's crews can take any number of \textbf{Reactions}.
+
+  There are different rules for \textbf{dogfighting}.
+\end{emphbox}
+
+\subsection{Range Bands}
+
+\begin{tabularx}{\linewidth}{Xrlr} \toprule
+  Band & Min & Max & Thrust \\ \midrule
+  Adjacent & --- & \SI{1}{\kilo\meter} & 1 \\
+  Close & \SI{1}{\kilo\meter} & \SI{10}{\kilo\meter} & 1 \\
+  Short & \SI{11}{\kilo\meter} & \SI{1250}{\kilo\meter} & 2 \\
+  Medium & \SI{1251}{\kilo\meter} & \SI{10000}{\kilo\meter} & 5 \\
+  Long & \SI{10001}{\kilo\meter} & \SI{25000}{\kilo\meter} & 10 \\
+  Very Long & \SI{25001}{\kilo\meter} & \SI{50000}{\kilo\meter} & 25 \\
+  Distance & \SI{50000}{\kilo\meter} & --- & 50 \\ \bottomrule
+\end{tabularx}
+
+\subsection{Manoeuvre Step}
+
+\textbf{Move}\\
+Spend Thrust (possibly over multiple rounds) to move up or down a
+range band.  If both ships are moving, use relative Thrust.
+
+If the ships enter Close or Adjacent range, switch to
+\textbf{Dogfighting} rules.
+
+\textbf{Aid Gunners}\\
+Spend one point of Thrust and make a \skillcheck{Pilot (spacecraft)}
+to start a Task Chain with the gunners.
+
+\textbf{Dock}\\
+Make a \skillcheck{Pilot (spacecraft)}.  If the other ship is
+unwilling, make an opposed check with a Bane to the ship trying to
+dock.
+
+\subsection{Attack Step}
+
+One Gunner attacks per turret and the Pilot attacks with fixed-mount
+weapons.  Make a \chrskillcheck{dex}{Gunner (specialism)} with:
+
+\begin{tabularx}{\linewidth}{Xr} \toprule
+  Bonus & \textsc{dm} \\ \midrule
+  Short Range & +1 \\
+  Pulse Laser & +2 \\
+  Beam Laser & +4 \\ \midrule
+  Penalty & \\ \midrule
+  Long Range & -2 \\
+  Very Long Range & -4 \\
+  Distant Range & -6 \\ \bottomrule
+\end{tabularx}
+
+\subsection{Action Step}
+
+\textbf{Improve Initiative (Captain)}\\
+Make a \skillcheck{Leadership}.  Add the Effect to Initiative for the
+next round only.
+
+\textbf{Jump (Engineer)}\\
+Make both checks with \diemod{-2} due to bringing the timeframe down
+to \dice{1d} minutes.
+
+\textbf{Offline System (Engineer)}\\
+Make a \chrskillcheck{edu}{Engineer (power)} to shut down any number
+of systems.  Bringing any number of systems online requires a round.
+
+\textbf{Overload Drive (Engineer)}\\
+Make a \chrskillcheck[Difficult]{int}{Engineer (m-drive)} to increase
+Thrust by 1 for the next round only.  Exceptional Failure inflicts a
+\textbf{Critical Hit} with Severity 1.
+
+This check has a cumulative \diemod{-2} on every attempt after the
+first.  This penalty can be removed by making a \skillcheck{Engineer
+  (m-drive)} in \dice{1d} hours.
+
+\textbf{Overload Plant (Engineer)}\\
+Make a \chrskillcheck[Difficult]{int}{Engineer (power)} to increase
+Power by 10\% for the next round only.  Exceptional Failure indlicts a
+\textbf{Critical Hit} with Severity 1.
+
+This check has a cumulative \diemod{-2} on every attempt after the
+first.  This penalty can be removed by making a \skillcheck{Engineer
+  (power)} in \dice{1d} hours.
+
+\textbf{Repair System (Engineer)}\\
+See \textbf{Repairs} section.  Only \textbf{Critical Hits} may be
+repaired, not hull damage.
+
+\textbf{Reload Turret (Gunner)}\\
+The turret cannot be used for an attack this round.
+
+\textbf{Sensor Lock (Sensor Operator)}\\
+Make a \skillcheck{Electronics (sensors)} to gain a Boon to attacks
+against that target.
+
+\textbf{Electronic Warfare (Sensor Operator)}\\
+Make an opposed \skillcheck{Electronics (comms)} to jam
+communications.
+
+Or \skillcheck{Electronics (sensors)} to break a Sensor Lock.
+
+Or \skillcheck[Difficult]{Electronics (sensors)} to destroy as many
+missiles in a salvo as the Effect (once per round).
+
+\textbf{Boarding Action (Marine)}\\
+See \textbf{Boarding Actions} section.
+
+\textbf{Reassignment}\\
+Change to another duty, able to act as it from the next round.
+
+\subsection{Reactions}
+
+\textbf{Evasive Action (Pilot)}\\
+Spend one Thrust to inflict the Pilot \textsc{dm} as a to-hit penalty
+to one specific attack.
+
+\textbf{Point Defence (Gunner)}\\
+Make a \chrskillcheck{dex}{Gunner (turrent)}, with a laser turret,
+right before a missile salvo hits, destroying as many missiles as the
+Effect.  Gain \diemod{+1} from a double turret of lasers, and
+\diemod{+2} from a triple turret of lasers.
+
+A weapon used for Point Defence cannot also attack in the same round.
+
+\textbf{Disperse Sand (Gunner)}\\
+Make a \chrskillcheck{dex}{Gunner (turret)} and, on success, add
+\dice{1d + Effect} to the ship's armour against a specific laser
+attack.
+
+This may also be used to attack a boarding party, dealing \dice{8d}
+points of damage to each member of the party.
+
+\subsection{Missile Combat}
+
+\begin{tabularx}{\linewidth}{Xr} \toprule
+  Range & Rounds to impact \\ \midrule
+  Medium and below & 0 \\
+  Long & 1 \\
+  Very Long & 4 \\
+  Distant & 10 \\ \bottomrule
+\end{tabularx}
+
+For the purposes of evasive action, a missile salvo has an effective
+Thrust of 10.  If a salvo hasn't hit in 10 rounds, it becomes inert.
+
+\textbf{Smart}\\
+If launched below Short range, any Smart trait is lost.
+
+\textbf{To-Hit Roll}\\
+Roll \dice{2d + Num Missiles}, plus any other modifiers (like Smart).
+A salvo launched at Distant range suffers \diemod{-6}.
+
+\textbf{Damage Roll}\\
+Roll for damage as if it were a single missile and deduct armour, but
+multiply by the Effect of the to-hit roll (rather than add).
+
+\subsection{Damage}
+
+Add to-hit Effect to weapon damage.  Armour reduces damage.  Unlike
+normal combat, an Effect of 6 or more does \emph{not} deal guaranteed
+damage.
+
+The target suffers a \textbf{Critical Hit} every 10\% (rounded up) of
+hull it loses at Severity 1, and for every to-hit roll with an Effect
+of 6 which inflicts damage.
+
+\textbf{Double and Triple Turrets}\\
+If a turret has different types of weapons, only one type may be used
+to attack a target in a round.  If the weapons are the same type, they
+can all attack, adding \diemod{+1} to the damage per additional damage
+die.
+
+Sandcasters can be linked in the same way to more effectively block
+laser attacks.
+
+\textbf{Damage Scale}\\
+A spacecraft weapon attacking a ground target suffers \diemod{-2}
+to-hit but $\times$10 damage, with Blast 10.
+
+A ground weapon attacking a spacecraft target gains \diemod{+2} to-hit
+but $\div$10 damage.
+
+Scaling is done after any other modifiers.
+
+\subsection{Critical Hits}
+
+\begin{tabularx}{\linewidth}{lX} \toprule
+\dice{2d} & Hit Location \\ \midrule
+2 & Sensors \\
+3 & Power Plant \\
+4 & Fuel \\
+5 & Weapon \\
+6 & Armour \\
+7 & Hull \\
+8 & M-Drive \\
+9 & Cargo \\
+10 & J-Drive \\
+11 & Crew \\
+12 & Computer \\ \bottomrule
+\end{tabularx}
+
+See page 159 of the core rulebook for Critical Hit effects.
+
+Any extra damage caused by the Critical Hit effect ignores armour.
+
+\textbf{Severity}\\
+The Severity of the hit is the damage which inflicted it, divided by
+10, rounded up.  If the location has already taken a Critical Hit, use
+the Severity of the current hit or one plus the Severity of the
+previous hit (whichever is greater).
+
+Once a location has reached Severity 6, further Critical Hits inflict
+\dice{6d} extra damage.
+
+\subsection{Weapon Power Requirements}
+
+\begin{tabularx}{\linewidth}{Xr} \toprule
+  Weapon & Power Required \\ \midrule
+  Beam Laser & 4 \\
+  Missile Rack & 0 \\
+  Particle Beam & 8 \\
+  Pulse Laser & 4 \\
+  Sandcaster & 0 \\
+  Turret & 1 \\ \bottomrule
+\end{tabularx}
+
+\subsection{Close Range Combat (Dogfighting)}
+
+Combat rounds are 6 seconds long.  Ships of 100 tons or more suffer
+\diemod{-6} on all to-hit rolls.
+
+Each round, make an opposed \skillcheck{Pilot}, with:
+
+\begin{tabularx}{\linewidth}{lX} \toprule
+  Dogfighter & \textsc{dm} \\ \midrule
+  Ship is 50 tons or more & -1 \\
+  Ship is 100 tons or more & -2 \\
+  For each extra 100 tons & -1 \\
+  For each extra enemy & -1 \\
+  Ship's thrust & +1 per point dedicated to dogfighting \\ \bottomrule
+\end{tabularx}
+
+\textbf{On draw:} neither ship may attack the other with fixed weapons.
+
+\textbf{On success:} the winner chooses the relative position of the
+ships and gains \diemod{+2} for to-hit rolls, whereas the loser
+suffers \diemod{-2}.  The winner uses the difference as a positive
+\textsc{dm} in the next round's opposed \skillcheck{Pilot}.
+
+\subsection{Boarding Actions}
+
+See page 163 of the core rulebook and page 17 of Pirates of Drinax.
+
+\subsection{Gas Giant Operations}
+
+See page 157 of the Traveller Companion
+\end{multicols}
+
+\end{document}
