@@ -17,6 +17,7 @@
 \RequirePackage{siunitx}
 \RequirePackage{adjustbox}
 \RequirePackage{array}
+\RequirePackage{pdflscape}
 
 \RequirePackage{fontspec}
 \setmainfont{equity}[

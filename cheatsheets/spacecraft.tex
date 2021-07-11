@@ -64,19 +64,19 @@ minutes.  Pilot checks have \diemod{-4}.
 \dice{4d} damage each round.  Pilot checks have \diemod{-5}.  Sensors
 do not work.
 
-\textbf{Moving between layers:} \skillcheck{Pilot (spacecraft)},
-\diemod{largest negative}.  On failure, the ship bounces off the other
-layer and must succeed \skillcheck[Difficult]{Pilot (spacecraft)} or
-take \dice{[layer]d} hull damage.
+\textbf{Moving between layers}\\
+\skillcheck{Pilot (spacecraft)}, \diemod{largest negative}.  On
+failure, the ship bounces off the other layer and must succeed
+\skillcheck[Difficult]{Pilot (spacecraft)} or take \dice{[layer]d}
+hull damage.
 
-\textbf{Fuel skimming:} gain fuel equal to 1\% of hull tonnage per
-pass, where a pass takes \dice{2d} minutes.
+\textbf{Fuel skimming}\\
+Gain fuel equal to 1\% of hull tonnage per pass, where a pass takes
+\dice{2d} minutes.
 
-\textbf{Sensors:} checks to detect another vessel have \diemod{-2} for
-every layer between them.
-
-\textbf{Weapons:} Spacecraft weapons are less effective deeper in the
-atmosphere.  See \textbf{Space Combat} section.
+\textbf{Sensors and Weapons}\\
+These are less effective in the atmosphere of a gas giant.  See
+\textbf{Space Combat} section.
 
 \subsection{Running Costs and Maintenance}
 
@@ -181,7 +181,7 @@ Full repairs need a Engineer or Mechanic check (taking \dice{1d}
 hours) and spare parts:
 
 \begin{tabularx}{\linewidth}{Xr} \toprule
-  Effect - Severity & Parts Required \\ \midrule
+  Effect minus Severity & Parts Required \\ \midrule
   1 or less & 1 ton \\
   2 & 0.8 tons \\
   3 & 0.3 tons \\
@@ -194,9 +194,9 @@ A destroyed weapon or piece of equipment cannot be repaired with spare
 parts, and has to be replaced.
 
 \textbf{Hull Damage}\\
-Each lost hull point can be repaired with a
+Each lost Hull Point can be repaired with a
 \chrskillcheck[Routine]{int {\normalfont or} edu}{Mechanic} (taking 1
-hour), for 1 ton of spare parts per 10 hull points repaired.
+hour), for 1 ton of spare parts per 10 Hull Points repaired.
 
 \subsection{Common Travel Times}
 
@@ -436,8 +436,8 @@ normal combat, an Effect of 6 or more does \emph{not} deal guaranteed
 damage.
 
 The target suffers a \textbf{Critical Hit} every 10\% (rounded up) of
-hull it loses at Severity 1, and for every to-hit roll with an Effect
-of 6 which inflicts damage.
+Hull Points it loses at Severity 1, and for every to-hit roll with an
+Effect of 6 which inflicts damage.
 
 \textbf{Double and Triple Turrets}\\
 If a turret has different types of weapons, only one type may be used
@@ -459,24 +459,12 @@ Scaling is done after any other modifiers.
 
 \subsection{Critical Hits}
 
-\begin{tabularx}{\linewidth}{lX} \toprule
-\dice{2d} & Hit Location \\ \midrule
-2 & Sensors \\
-3 & Power Plant \\
-4 & Fuel \\
-5 & Weapon \\
-6 & Armour \\
-7 & Hull \\
-8 & M-Drive \\
-9 & Cargo \\
-10 & J-Drive \\
-11 & Crew \\
-12 & Computer \\ \bottomrule
-\end{tabularx}
+Roll for the Critical Hit location and apply its effect (see next
+sheet).
 
-See page 159 of the core rulebook for Critical Hit effects.
-
-Any extra damage caused by the Critical Hit effect ignores armour.
+Any extra damage caused by the Critical Hit effect ignores armour, and
+may trigger a further Critical Hit by reaching another
+10\%-of-Hull-Points tipping point.
 
 \textbf{Severity}\\
 The Severity of the hit is the damage which inflicted it, divided by
@@ -522,13 +510,101 @@ ships and gains \diemod{+2} for to-hit rolls, whereas the loser
 suffers \diemod{-2}.  The winner uses the difference as a positive
 \textsc{dm} in the next round's opposed \skillcheck{Pilot}.
 
+\subsection{Gas Giant Operations}
+
+\textbf{Sensors}\\
+Checks to detect another vessel have \diemod{-2} for every layer
+between them, not counting the Wisp layer.
+
+\textbf{Energy weapons}\\
+For every layer down the firing ship is, not counting the Wisp layer:
+the weapon range is halved and each damage die is reduced by one
+(\textit{e.g.} Deep reduces range to $\frac{1}{8}$ and damage to
+\dice{2d-8}).
+
+\textbf{Missile weapons}\\
+These deal normal damage, but must pass an Average check when crossing
+a layer boundary or be destroyed (missiles designed to operate in a
+gas giant atmosphere must pass a Routine check).  Entering the Wisp,
+Extreme Shallow, or Shallow layers does not require a check.
+
 \subsection{Boarding Actions}
 
 See page 163 of the core rulebook and page 17 of Pirates of Drinax.
 
-\subsection{Gas Giant Operations}
-
-See page 157 of the Traveller Companion
 \end{multicols}
 
+\begin{landscape}
+\section{Critical Hit Locations and Effects}
+
+\begin{tabularx}{\linewidth}{llXXXXXX} \toprule
+  \dice{2d} & Location & Severity 1 & Severity 2 & Severity 3 & Severity 4 & Severity 5 & Severity 6 \\ \midrule
+  2 & Sensors & Checks to use sensors suffer \diemod{-2}. & Sensors inoperative beyond Medium range. & Sensors inoperative beyond Short range. & Sensors inoperative beyond Close range. & Sensors inoperative beyond Adjacent range. & Sensors disabled. \\ \midrule
+  3 & Power Plant & Reduce Power by 10\%. & Reduce Power by 10\%. & Reduce Power by 50\%. & Reduce Power to 0. & Increase Hull Severity by 1. & Increase Hull Severity by \dice{1d}. \\
+  & & Reduce Thrust by 1.  & Reduce Thrust by 1. & Reduce Thrust by 1. & Reduce Thrust to 0. & & \\ \midrule
+  4 & Fuel & Lose \dice{1d} tons of fuel per hour. & Lose \dice{1d} tons of fuel per round. & Lose \dice{1d $\times$ 10\%} of fuel. & Fuel tank destroyed. & Increase Hull Severity by 1. & Increase Hull Severity by \dice{1d} \\ \midrule
+  5 & Weapon & Random weapon suffers Bane. & Random weapon disabled. & Random weapon destroyed. & Random weapon explodes. & Random weapon explodes. & Random weapon explodes. \\
+  & & & & & Increase Hull Severity by 1. & Increase Hull Severity by 1. & Increase Hull Severity by 1. \\ \midrule
+  6 & Armour & Reduce Armour by 1. & Reduce Armour by \dice{d3}. & Reduce Armour by \dice{1d}. & Reduce Armour by \dice{1d}. & Reduce Armour by \dice{2d}. & Reduce Armour by \dice{2d}. \\
+  & & & & & & Increase Hull Severity by 1. & Increase Hull Severity by 1. \\ \midrule
+  7 & Hull & Spacecraft suffers \dice{1d} damage. & Spacecraft suffers \dice{2d} damage. & Spacecraft suffers \dice{3d} damage. & Spacecraft suffers \dice{4d} damage. & Spacecraft suffers \dice{5d} damage. & Spacecraft suffers \dice{6d} damage. \\ \midrule
+  8 & M-Drive & Checks to control spacecraft suffer \diemod{-1}. & Checks to control spacecraft suffer \diemod{-2}. & Checks to control spacecraft suffer \diemod{-3}. & Checks to control spacecraft suffer \diemod{-4}. & Reduce Thrust to 0. & Increase Hull Severity by 1. \\
+  & & & & Reduce Thrust by 1. & Reduce Thrust by 1. & Reduce Thrust by 1. & \\ \midrule
+  9 & Cargo & Destroy 10\% of cargo. & Destroy \dice{1d $\times$ 10\%} of cargo. & Destroy \dice{2d $\times$ 10\%} of cargo. & Destroy all cargo. & Increase Hull Severity by 1. & Increase Hull Severity by 1. \\ \midrule
+  10 & J-Drive & Checks to use J-Drive suffer \diemod{-2}. & J-drive disabled. & J-Drive destroyed. & Increase Hull Severity by 1. & Increase Hull Severity by 1. & Increase Hull Severity by 1. \\ \midrule
+  11 & Crew & Random occupant takes \dice{1d} damage. & Life support fails within \dice{1d} hours. & \dice{1d} random occupants take \dice{2d} damage. & Life support fails within \dice{1d} rounds. & All occupants take \dice{3d} damage. & Life support fails. \\ \midrule
+  12 & Computer & Checks to use computers suffer \diemod{-2}. & Reduce Computer Rating by 1. & Reduce Computer Rating by 1. & Reduce Computer Rating by 1. & Computer disabled. & Computer destroyed. \\
+  \bottomrule
+\end{tabularx}
+
+Effects are cumulative, \textit{e.g.}
+
+\textbf{After a Severity 3 Sensors critical hit}\\
+Checks to use sensors suffer \diemod{-2} and cannot be made at all
+beyond Short range.
+
+\textbf{After a Severity 3 Power Plant critical hit}\\
+Power has been reduced by a total of 70\% (to 30\% of original) and
+Thrust has been reduced by a total of 3 points.
+
+\textbf{After a Severity 3 Fuel critical hit}\\
+The ship is losing \dice{1d} tons of fuel per hour, a further
+\dice{1d} tons of fuel per hour and, in the last hit, immediately lost
+\dice{1d $\times$ 10\%} of the remaining fuel.
+
+\textbf{After a Severity 3 Weapon critical hit}\\
+One random weapon suffers a Bane die to all checks, one random weapon
+has been disabled, and one random weapon has been destroyed outright.
+These could all be the same weapon.
+
+\textbf{After a Severity 3 Armour critical hit}\\
+Armour has been reduced by a total of \dice{1 + d3 + 1d} points.
+
+\textbf{After a Severity 3 Hull critical hit}\\
+The spacecraft has suffered a further \dice{6d} damage in total: one
+hit of \dice{1d}, one hit of \dice{2d}, and one hit of \dice{3d}.
+These may have triggered further critical hits.
+
+\textbf{After a Severity 3 M-Drive critical hit}\\
+Checks to control the spacecraft suffer \diemod{-3} and Thrust has
+been reduced by 1 point.
+
+\textbf{After a Severity 3 Cargo critical hit}\\
+A total of \dice{(1 + 3d) $\times$ 10\%} of the cargo has been
+destroyed.
+
+\textbf{After a Severity 3 J-Drive critical hit}\\
+The J-Drive has been destroyed.
+
+\textbf{After a Severity 3 Crew critical hit}\\
+One random occupant has taken \dice{1d} damage, \dice{1d} random
+occupants have taken a further \dice{2d} damage (the original
+unfortunate could be in this second cohort), and life support will
+fail within \dice{1d} hours.
+
+\textbf{After a Severity 3 Computer critical hit}\\
+Checks to use the computer suffer \diemod{-2} and the Computer Rating
+has been reduced by a total of 2 points.
+
+\end{landscape}
 \end{document}
