@@ -1,0 +1,107 @@
+\documentclass[landscape]{cheatsheet}
+
+\begin{document}
+
+\section{Universal World Profile (UWP)}
+
+\begin{tabularx}{\linewidth}{l|l|lllllllllp{1em}|l|l|l}
+\multicolumn{1}{l}{Name} & \multicolumn{1}{l}{Location} & \rot{Starport Quality} & \rot{Planet Size} & \rot{Atmosphere Type} & \rot{Hydrographic \%} & \rot{Population} & \rot{Government} & \rot{Law Level} & & \rot{Tech Level} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{Bases} & \multicolumn{1}{l}{Trade Codes} & \multicolumn{1}{l}{Travel Zone} \\ \midrule
+\texttt{Cogri} & \texttt{0101} & \texttt{C} & \texttt{A} & \texttt{6} & \texttt{A} & \texttt{6} & \texttt{4} & \texttt{3} & \texttt{-} & \texttt{9} & & \texttt{N} & \texttt{Ri Wa} & \texttt{A} \\ \bottomrule
+\end{tabularx}
+
+\subsection{UWP Key}
+
+\begin{tabularx}{\linewidth}{l|l|l|l|l|l|l|l|l|l|X|X|l}
+  \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{2}{l}{Planet Size} & \multicolumn{3}{l}{Atmosphere Type} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{2}{l}{Government} & \multicolumn{2}{l}{Law Level (cumulative)} \\ \cmidrule(lr){3-4} \cmidrule(lr){5-7} \cmidrule(lr){10-11} \cmidrule(lr){12-13}
+  \multicolumn{1}{l}{} & \multicolumn{1}{l}{Starport} & \multicolumn{1}{l}{Size} & \multicolumn{1}{l}{Gravity} & \multicolumn{1}{l}{Atmosphere} & \multicolumn{1}{l}{Pressure} & \multicolumn{1}{l}{Protection} & \multicolumn{1}{l}{Hydro. \%} & \multicolumn{1}{l}{Pop.} & \multicolumn{1}{l}{Type} & \multicolumn{1}{l}{Contraband} & \multicolumn{1}{l}{Banned Weapons} & \multicolumn{1}{l}{Banned Armour} \\ \midrule
+  0 (X)  & None      & $\leq$\SI{1000}{\kilo\meter} & 0 (no)    & None             & 0.00      & Vacc suit          & 0 to 5\%    &  $10^{0}$ & None & None & None & None \\
+  1      & ---       &  \SI{1600}{\kilo\meter}      & 0.05 (lo) & Trace            & 0.05      & Vacc suit          & 6 to 15\%   &  $10^{1}$ & Company / Corporation & Weapons, drugs, travellers & Poison gas, explosives, undetectable weapons, WMDs & Battle dress \\
+  2      & ---       &  \SI{3200}{\kilo\meter}      & 0.15 (lo) & V. Thin, Tainted & 0.2       & Respirator, filter & 16 to 25\%  &  $10^{2}$ & Participating Democracy & Drugs & Portable energy and laser weapons & Combat armour \\
+  3      & ---       &  \SI{4800}{\kilo\meter}      & 0.25 (lo) & V. Thin          & 0.2       & Respirator         & 26 to 35\%  &  $10^{3}$ & Self-perpetuating Oligarchy & Technology, weapons, travellers & Military weapons & Flak \\ \midrule
+  4      & ---       &  \SI{6400}{\kilo\meter}      & 0.35 (lo) & Thin, Tainted    & 0.6       & Filter             & 36 to 45\%  &  $10^{4}$ & Representative Democracy & Drugs, weapons & Light assault weapons and SMGs & Cloth \\
+  5      & ---       &  \SI{8000}{\kilo\meter}      & 0.45 (lo) & Thin             & 0.6       & ---                & 46 to 55\%  &  $10^{5}$ & Feudal Technocracy & Technology, weapons, computers & Personal concealable weapons & Mesh \\
+  6      & ---       &  \SI{9600}{\kilo\meter}      & 0.7 (lo)  & Standard         & 1.0       & ---                & 56 to 65\%  &  $10^{6}$ & Captive Government & Weapons, technology, travellers & All firearms except shotguns and stunners & --- \\
+  7      & ---       & \SI{11200}{\kilo\meter}      & 0.9       & Std., Tainted    & 1.0       & Filter             & 66 to 75\%  &  $10^{7}$ & Balkanisation & Varies & Shotguns & --- \\ \midrule
+  8      & ---       & \SI{12800}{\kilo\meter}      & 1.0       & Dense            & 2.0       & ---                & 76 to 85\%  &  $10^{8}$ & Civil Service Bureaucracy & Drugs, weapons & All bladed weapons, stunners & All visible armour \\
+  9      & ---       & \SI{14400}{\kilo\meter}      & 1.25      & Dense, Tainted   & 2.0       & Filter             & 86 to 95\%  &  $10^{9}$ & Impersonal Bureaucracy & Technology, weapons, drugs, travellers & All & All \\
+  10 (A) & Excellent & \SI{1600}{\kilo\meter}       & 1.4 (hi)  & Exotic           & Varies    & Air supply         & 96 to 100\% & $10^{10}$ & Charismatic Dictator & None & --- & --- \\
+  11 (B) & Good      & ---                          & ---       & Corrosive        & Varies    & Vacc suit          & ---         & $10^{11}$ & Non-Charismatic Leader & Weapons, technology, computers & --- & ---  \\ \midrule
+  12 (C) & Routine   & ---                          & ---       & Insidious        & Varies    & Vacc suit          & ---         & $10^{12}$ & Charismatic Oligarchy & Weapons & --- & --- \\
+  13 (D) & Poor      & ---                          & ---       & V. Dense         & 2.5+      & ---                & ---         & $10^{13}$ & Religious Dictatorship & Varies & --- & --- \\
+  14 (E) & Frontier  & ---                          & ---       & Low              & $\leq$0.5 & ---                & ---         & $10^{14}$ & Religious Autocracy & Varies & --- & --- \\
+  15 (F) & ---       & ---                          & ---       & Unusual (Varies) & Varies    & Varies             & ---         & $10^{15}$ & Totalitarian Oligarchy & Varies & --- & --- \\ \bottomrule
+\end{tabularx}
+
+
+\begin{multicols}{2}
+\subsection{Starport Quality}
+\begin{tabularx}{\linewidth}{lllll} \toprule
+  Class & Quality & Berthing Cost & Fuel & Facilities \\ \midrule
+  A & Excellent & \dice{1d} $\times$ Cr1000 & Refined (Cr500/ton) & Shipyard (all), repair \\
+  B & Good & \dice{1d} $\times$ Cr500 & Refined (Cr500/ton) & Shipyard (spacecraft), repair \\
+  C & Routine & \dice{1d} $\times$ Cr100 & Unrefined (Cr100/ton) & Shipyard (small craft), repair \\
+  D & Poor & \dice{1d} $\times$ Cr10 & Unrefined (Cr100/ton) & Limited repair \\
+  E & Frontier & Free & --- & --- \\
+  X & None & --- & --- & --- \\ \bottomrule
+\end{tabularx}
+
+\subsection{Trade Codes}
+
+\textbf{Agricultural (Ag):} Dedicated to farming and food production.
+
+\textbf{Asteroid (As):} Usually mining colonies, can also be orbital
+factories or colonies.
+
+\textbf{Barren (Ba):} Uncolonised and empty.
+
+\textbf{Desert (De):} Dry and barely habitable.
+
+\textbf{Fluid Oceans (Fl):} Non-water surface liquid, incompatible
+with Earth-derived life.
+
+\textbf{Garden (Ga):} Earth-like.
+
+\textbf{High Population (Hi):} A population in the billions.
+
+\textbf{High Tech (Ht):} Among the most advanced in Charted Space.
+
+\textbf{Ice-Capped (Ic):} Cold and dry, most surface liquid frozen in
+polar ice caps.
+
+\textbf{Industrial (In):} Dominated by factories and cities.
+
+\textbf{Low Population (Lo):} A population of a few thousand or less.
+
+\textbf{Low Tech (Lt):} Pre-industrial and cannot produce advanced
+goods.
+
+\textbf{Non-Agricultural (Na):} Too dry or barren to support the
+population through conventional food production.
+
+\textbf{Non-Industrial (NI):} Too low in population to maintain an
+extensive industrial base.
+
+\textbf{Poor (Po):} Lacking resources, viable land, or sufficient
+population to be anything other than marginal colonies.
+
+\textbf{Rich (Ri):} An economic powerhouse with a stable government
+and viable biosphere.
+
+\textbf{Vacuum (Va):} No atmosphere.
+
+\textbf{Water World (Wa):} Almost entirely water-ocean.
+
+\subsection{Travel Zone}
+
+Travel Zones are designated by the Third Imperium, and are from a
+human perspective.
+
+\textbf{Amber:} Deemed risky.  Not off-limits, but Travellers should
+be on their guard.
+
+\textbf{Red:} Off-limits, with the interdiction enforced by the
+Imperial Navy or fixed defence (\textit{e.g.} minefields).
+
+\end{multicols}
+
+\end{document}

@@ -15,6 +15,8 @@
 \RequirePackage[svgnames]{xcolor}
 \RequirePackage{titlesec}
 \RequirePackage{siunitx}
+\RequirePackage{adjustbox}
+\RequirePackage{array}
 
 \RequirePackage{fontspec}
 \setmainfont{equity}[
@@ -50,6 +52,10 @@
 
 % Y = centred X
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% R = rotated l
+\newcolumntype{R}[2]{>{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}l<{\egroup}}
+\newcommand*\rot{\multicolumn{1}{R{45}{1em}}}
 
 \newenvironment{emphbox}{\begin{Sbox}\begin{minipage}{\columnwidth - 2\fboxsep - 2\fboxrule - \shadowsize}\small}{\end{minipage}\end{Sbox}\shadowbox{\TheSbox}}
 
