@@ -386,8 +386,8 @@ Change to another duty, able to act as it from the next round.
 \subsection{Reactions}
 
 \textbf{Evasive Action (Pilot)}\\
-Spend one Thrust to inflict the Pilot \textsc{dm} as a to-hit penalty
-to one specific attack.
+Spend one Thrust to inflict the Pilot \textsc{dm} as a penalty to the
+Attack roll for one specific attack.
 
 \textbf{Point Defence (Gunner)}\\
 Make a \chrskillcheck{dex}{Gunner (turrent)}, with a laser turret,
@@ -421,22 +421,22 @@ Thrust of 10.  If a salvo hasn't hit in 10 rounds, it becomes inert.
 \textbf{Smart}\\
 If launched below Short range, any Smart trait is lost.
 
-\textbf{To-Hit Roll}\\
+\textbf{Attack Roll}\\
 Roll \dice{2d + Num Missiles}, plus any other modifiers (like Smart).
 A salvo launched at Distant range suffers \diemod{-6}.
 
 \textbf{Damage Roll}\\
 Roll for damage as if it were a single missile and deduct armour, but
-multiply by the Effect of the to-hit roll (rather than add).
+multiply by the Effect of the Attack roll (rather than add).
 
 \subsection{Damage}
 
-Add to-hit Effect to weapon damage.  Armour reduces damage.  Unlike
-normal combat, an Effect of 6 or more does \emph{not} deal guaranteed
-damage.
+Add the Effect of the Attack roll to weapon damage.  Armour reduces
+damage.  Unlike normal combat, an Effect of 6 or more does \emph{not}
+deal guaranteed damage.
 
 The target suffers a \textbf{Critical Hit} every 10\% (rounded up) of
-Hull Points it loses at Severity 1, and for every to-hit roll with an
+Hull Points it loses at Severity 1, and for every Attack roll with an
 Effect of 6 which inflicts damage.
 
 \textbf{Double and Triple Turrets}\\
@@ -449,11 +449,11 @@ Sandcasters can be linked in the same way to more effectively block
 laser attacks.
 
 \textbf{Damage Scale}\\
-A spacecraft weapon attacking a ground target suffers \diemod{-2}
-to-hit but $\times$10 damage, with Blast 10.
+A spacecraft weapon attacking a ground target suffers \diemod{-2} to
+Attack rolls but $\times$10 damage, with Blast 10.
 
-A ground weapon attacking a spacecraft target gains \diemod{+2} to-hit
-but $\div$10 damage.
+A ground weapon attacking a spacecraft target gains \diemod{+2} to
+Attack rolls but $\div$10 damage.
 
 Scaling is done after any other modifiers.
 
@@ -490,7 +490,7 @@ Once a location has reached Severity 6, further Critical Hits inflict
 \subsection{Close Range Combat (Dogfighting)}
 
 Combat rounds are 6 seconds long.  Ships of 100 tons or more suffer
-\diemod{-6} on all to-hit rolls.
+\diemod{-6} on all Attack rolls.
 
 Each round, make an opposed \skillcheck{Pilot}, with:
 
@@ -506,7 +506,7 @@ Each round, make an opposed \skillcheck{Pilot}, with:
 \textbf{On draw:} neither ship may attack the other with fixed weapons.
 
 \textbf{On success:} the winner chooses the relative position of the
-ships and gains \diemod{+2} for to-hit rolls, whereas the loser
+ships and gains \diemod{+2} for Attack rolls, whereas the loser
 suffers \diemod{-2}.  The winner uses the difference as a positive
 \textsc{dm} in the next round's opposed \skillcheck{Pilot}.
 
