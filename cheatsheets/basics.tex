@@ -212,11 +212,6 @@ Drag up to 3 metres.
 
 One Traveller may make a Leadership check.  Their side gets Boon or
 Bane dice equal to the Effect.
-
-\subsection{Weapon Traits}
-
-See page 75 of the core rulebook and page 7 of the Central Supply
-Catalogue.
 \end{multicols}
 
 \begin{multicols}{2}
@@ -268,5 +263,135 @@ negative \textsc{dm}.
 \textbf{Unconsciousness}\\
 Make an \textsc{end} check to regain consciousness, with a cumulative
 \diemod{+1}.
+\end{multicols}
+
+\section{Weapon Traits}
+
+\begin{multicols}{3}
+\subsection{AP $x$}
+
+Ignores $x$ points of armour.
+
+Spacecraft-scale targets ignore this trait unless the weapon making
+the attack is also spacecraft-scale.
+
+\subsection{Artillery}
+
+Can fire normally at targets in line-of-sight or indirectly at targets
+out of line-of-sight with \diemod{-2}.
+
+If the precise location of the target is not known, the attack lands
+\dice{1d} meters away for every 100 meters (rounded up) the target is
+from the attacker, minus the Effect of the Attack roll.
+
+\textbf{Forward observers}\\
+An observer with direct line-of-sight to the target and a comms link
+with the attacker may make an \chrskillcheck{int}{Electronics (comms)}
+to start a task chain with the attacker.
+
+In this case, if the attacker misses, roll \dice{1d} for each point of
+negative Effect, and multiply the total by 10 (if an aircraft or
+artillery weapon) or 100 (if an orbital weapon), and that is how many
+metres away from the target the attack lands.
+
+\subsection{Auto $x$}
+
+Can be fired in one of three modes:
+
+\textbf{Single}\\
+As a normal ranged attack.
+
+\textbf{Burst}\\
+Add $x$ to the damage.  This uses $x$ rounds, and cannot benefit from
+the Aim action or Scope trait.
+
+\textbf{Full Auto}\\
+Make $x$ attacks, which may be against multiple targets so long as all
+are within 6 metres of each other.  This uses $3 \times x$ rounds and
+cannot benefit from the Aim action or Scope trait.
+
+\subsection{Blast $x$}
+
+Damage is rolled against every target within $x$ metres.  Cannot be
+dodged, but targets may dive for cover.
+
+\subsection{Bulky}
+
+Must have \textsc{str} 9 or higher to use without penalty.  Otherwise,
+Attack rolls are made with \textsc{dm} equal to the difference between
+the attacker's \textsc{str dm} and 1.
+
+\subsection{Dangerous}
+
+If the Attack roll has an Effect of -5 or less the weapon explodes,
+rendering it inoperable, and the damage is inflicted upon the attacker
+using it.
+
+\subsection{Fire}
+
+Sets the target on fire, dealing damage each round.  If the target is
+set on fire multiple times, use the highest weapon fire damage.
+
+\textbf{Extinguishing a fire}\\
+Roll \dice{2d} at the start of every round.  On an 8 or more, the fire
+burns out.  A Traveller may extinguish a fire as a Significant Action
+with a \chrcheck{dex} (\diemod{+2} with firefighting equipment).
+
+\subsection{One Use}
+
+Rendered useless after a single use.
+
+\subsection{Radiation}
+
+A straight line of radiation extends from the attacker, through the
+target, and out to a distance in metres equal to the number of damage
+dice of the weapon (multiplied by 10 for Destructive weapons).
+
+All targets caught in the radiation receive \dice{2d $\times$ 20}
+rads, multiplied by 5 for spacecraft-scale weapons.
+
+\subsection{Scope}
+
+Ignores the rule that ranged attacks over 100 metres are considered to
+be Extreme Range regardless of the weapon's range.
+
+\subsection{Silent}
+
+Any attempts to detect the sound of the weapon firing suffer
+\diemod{-6}.
+
+\subsection{Smart}
+
+Attack rolls gain \textsc{dm} equal to the difference between the TL
+of the weapon and the TL of the target, from a minimum of \diemod{+1}
+to a maximum of \diemod{+6}.
+
+\subsection{Smasher}
+
+Cannot be parried.
+
+\subsection{Stun}
+
+Damage is only deducted from \textsc{end}, not from \textsc{str} or
+\textsc{dex}.  If the target's \textsc{end} reaches zero, they are
+incapacitated for a number of rounds equal to the number by which the
+damage exceeded their \textsc{end}.
+
+Damage from \textbf{Stun} weapons is completely healed by one hour of
+rest.
+
+\subsection{Very Bulky}
+
+Like \textbf{Bulky}, but requires \textsc{str} 12 or higher and the
+penalty is the difference from 2.
+
+\subsection{Very Dangerous}
+
+Like \textbf{Dangerous}, but explodes if the Effect of the Attack roll
+is -3 or less.
+
+\subsection{Zero-G}
+
+Does not require an \skillcheck{Athletics (dex)} when fired in Zero-G.
 \end{multicols}
 \end{document}
