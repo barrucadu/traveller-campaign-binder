@@ -25,3 +25,20 @@ Ideas for content
   - Per-session:
     - Prep
     - Notes
+
+Ideas for adventures
+-------------------
+
+- Traveller scenarios:
+  - From the Journal of the Traveller's Aid society
+  - From the Pirates of Drinax campaign
+  - From other Mongoose sourcebooks and magazines (eg, see Seth Skorkowsky's reviews)
+- Other sci-fi games (convert mechanics):
+  - Alien
+  - Mothership
+- Other systems (rewrite)
+  - Call of Cthulhu
+  - From the OSR
+- Other sources of ideas:
+  - Character goals
+  - Random tables
