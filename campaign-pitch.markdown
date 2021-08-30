@@ -145,8 +145,6 @@ There are lots of other careers, this list isn't exhaustive.
 
 ### The Space Pirate Campaign
 
-*This is my preferred option.*
-
 Mundane jobs don't have the thrill you're looking for, you want to do
 crimes.  Space crimes.  And what's the most fun sort of space crime?
 Space piracy.
