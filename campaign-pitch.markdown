@@ -258,11 +258,6 @@ them.
   does mean that a really bad misjump could destroy the ship instantly
   or send you 36 parsecs in the wrong direction.
 
-- **Training and Experience** (*Traveller Companion* chapter 6).
-  Characters can learn or be trained in skills using experience points
-  or study, rather than the normal study period approach from the core
-  rulebook.
-
 ## Links
 
 **Use your own PDFs.**
