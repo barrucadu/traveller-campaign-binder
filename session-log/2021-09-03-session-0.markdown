@@ -1,0 +1,66 @@
+# 2021-09-03: Session 0
+
+## Intro
+
+> Welcome to session zero of Traveller!  Today we'll talk a bit about
+> the sort of campaign we want to play, and then dive into character
+> creation.  The actual game will begin next session.  I've written a
+> campaign pitch, which I think you've all read, but we'll cover all
+> the points in it, and some more, now.  We might overrun today, as
+> character creation can take a while.
+
+## Prep
+
+### Pitch
+
+- Sandbox, with scope for long-term goals
+- Official Traveller Universe, starting in the Trojan Reach sector
+- I'll make some effort to stick to the published setting, but won't
+  necessarily be totally consistent
+- No psionics
+- Majority human party (or one species), one alien PC (Aslan or Vargr)
+  if you want
+
+### Discussion
+
+#### Scheduling
+
+- Session time & frequency
+- What happens if someone can't make a session?
+- Campaign length
+
+#### Characters
+
+- Changing characters / characters leaving the party
+- Character death
+- PvP (PvP isn't necessarily combat)
+- Character secrets vs player secrets
+
+#### Rules
+
+- I expect you to know how your character works
+- I have made cheatsheets for common rules
+- Some parts of the game I will off-load entirely to you (eg, trade)
+- Alternative rules:
+  - No psionics
+  - Character creation:
+    - Alternative character creation rules for alien PCs raised in their
+      native cultures
+    - Luck (*TC* page 4)
+    - Boon Dice (*TC* page 11)
+    - Allies, Contacts, Rivals, and Enemies (*TC* chapter 3)
+  - Mechanics:
+    - Additional Wound Effects (*TC* page 49)
+    - Misjumps (*TC* page 143)
+    - + whatever situational rules I think should apply
+
+#### Metagaming
+
+- Reduction of "planning in-character actions out-of-character, when
+  there's no opportunity in-character to do so" (discussing combat
+  strategy in the middle of a round, or talking about what to say to
+  an NPC when they're right next to you, or sharing information when
+  the characters are not together --- rules questions, clarifying
+  character knowledge, etc, are all fine)
+
+## Notes
