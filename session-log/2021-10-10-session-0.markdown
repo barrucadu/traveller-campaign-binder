@@ -1,0 +1,165 @@
+# 2021-10-10: Session 0
+
+## Intro
+
+> Welcome to session zero of Traveller!  Today we'll talk a bit about
+> the sort of campaign we want to play, and then dive into character
+> creation.  The actual game will begin next session.  I've written a
+> campaign pitch, which I think you've all read, but we'll cover all
+> the points in it, and some more, now.  We might overrun today, as
+> character creation can take a while.
+
+## Prep
+
+### Pitch
+
+- Sandbox, with scope for long-term goals
+- Official Traveller Universe, starting in the Trojan Reach sector
+  (Tobia subsector, not Sindal)
+- I'll make some effort to stick to the published setting, but won't
+  necessarily be totally consistent
+- No psionics
+- Majority human party (or one species), one alien PC (Aslan or Vargr)
+  if you want
+
+### Alien Travellers
+
+#### Aslan
+
+- Alien lion warrior race
+- Live into their 60s
+- Bigger than humans on average (average male is 2m tall, weighs
+  100kg)
+- Sleep for about a third of every 32-hour period
+- Almost exclusively carnivorous, preferring freshly-slaughtered prey
+- Can't digest Earth-derived meats without special pills (or permanent
+  treatment)
+- Social structure: families form prides (ahriy), which form clans,
+  who may owe fealty to more powerful clans
+- Spiritual but not religious, most Aslan carry some keepsakes or
+  heirlooms, and obey the traditions of their ancestors
+- Very proud and honourable, with formal duels in response to insults
+- Careers and skills are gender-segregated: females go for more
+  intellectual or educated careers, males go for more combat or
+  diplomatic roles
+- Males have little understanding of money and find it hard to grasp,
+  as finances are a female affair
+
+#### Vargr
+
+- Genetically-engineered Earth wolf people created by the mysterious
+  Ancients (and they're very proud of this)
+- Live into their 70s
+- Smaller than humans on average (average male is 1.6m tall, weighs
+  60kg)
+- Sleep several times in a 26-hour period
+- Mostly carnivorous, also eat fruit
+- Social structure: group / pack based, with most Vargr being in
+  multiple packs, lead by charismatic leaders; Vargr are loyal to the
+  pack, but seek to compete to improve their own charisma and standing
+  in it
+- Most Vargr are not especially religious, but they do venerate the
+  Ancients.  Organised religions are just another pack.
+- Where charisma alone cannot determine dominance, they will duel: the
+  motivation is different to Aslan (charisma & loyalty vs honour &
+  pride).
+- Packs with charismatic leaders fall down over a certain scale, so
+  Vargr do not have megacorporations or an interstellar government.
+  They do have a lot of corsairs, lead by charismatic pirate-captains
+  though.
+- Vargr eyesight is less colour sensitive than humans so, to human
+  eyes, all their clothes, art, and decorations are bright and garish
+
+### Discussion
+
+#### Scheduling
+
+- Session time & frequency
+- What happens if someone can't make a session?
+- Campaign length
+
+#### Characters
+
+- Changing characters / characters leaving the party
+- Character death
+- PvP (PvP isn't necessarily combat)
+- Character secrets vs player secrets
+
+#### Rules
+
+- I expect you to know how your character works
+- I have made cheatsheets for common rules
+- Some parts of the game I will off-load entirely to you (eg, trade)
+- Alternative rules:
+  - No psionics
+  - Character creation:
+    - Alternative character creation rules for alien PCs raised in their
+      native cultures
+    - Luck (*TC* page 4)
+    - Boon Dice (*TC* page 11)
+    - Allies, Contacts, Rivals, and Enemies (*TC* chapter 3)
+  - Mechanics:
+    - Additional Wound Effects (*TC* page 49)
+    - Misjumps (*TC* page 143)
+    - + whatever situational rules I think should apply
+  - Was going to use exp point rule, but training is fine actually
+
+#### Metagaming
+
+- Reduction of "planning in-character actions out-of-character, when
+  there's no opportunity in-character to do so" (discussing combat
+  strategy in the middle of a round, or talking about what to say to
+  an NPC when they're right next to you, or sharing information when
+  the characters are not together --- rules questions, clarifying
+  character knowledge, etc, are all fine)
+
+## Notes
+
+### Discussion
+
+- Schedule: 3 hours fortnightly is ok
+- Player absences: handle case-by-case
+- Campaign length: no preference
+- PvP: handle case-by-case (eg, combat is fine if both players agree
+  to it at the time)
+- Secrets: no preference
+- Wounds: try it out, maybe revisit later
+- Misjumps: ok
+- Metagaming: we'll try to police it
+
+### To Do (Players)
+
+- **Shopping:** Spend up to Cr2000 (out of your own money) on whatever
+  you want.
+
+#### Rakka
+
+- **Weapon:** Get a free weapon weapon with a limit of TL12 and
+  Cr1000.
+
+#### Pets
+
+- **Weapon:** Get a free weapon weapon with a limit of TL12 and
+  Cr1000.
+
+#### Noel
+
+- **Armour:** Get a free piece of armour with a limit of TL12 and
+  Cr10,000.
+- **Weapon:** Get a free weapon weapon with a limit of TL12 and
+  Cr1000.
+
+#### Yuyuko
+
+- **Free Trader:** Pick whether it's a Free Trader (Type-A) (High
+  Guard p120) or Far Trader (Type-A2) (High Guard p118)
+- **Weapon:** Get a free weapon weapon with a limit of TL12 and
+  Cr1000.
+
+### To Do (GM)
+
+- Review character sheets
+- Review NPCs
+- Figure out the initial location & mission
+- Create story seeds for future endeavours
+- Figure out how a campaign with two ships will work
