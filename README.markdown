@@ -1,6 +1,13 @@
 Traveller Campaign Binder
 =========================
 
+**This repository is archived.  Notes have moved to [my memos][1] and cheatsheets to [another repo][2]**
+
+[1]: https://memo.barrucadu.co.uk/campaign-notes-2021-10-traveller.html
+[2]: https://github.com/barrucadu/rpg-cheatsheets/
+
+---
+
 ![A spaceship](roll20-banner.jpg?raw=true)
 
 This repo contains ideas and plans for a Traveller campaign I'll be
